@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmTech Equipment - Product Catalog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .catalog-header {
+            padding: 120px 0 60px;
+            background: var(--light-color);
+            text-align: center;
+        }
+        
+        .catalog-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background: white;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 60px;
+        }
+        
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .page-btn:hover, .page-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.svg" alt="FarmTech Logo" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxMjAgNDAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiMyZWNjNzEiLz48dGV4dCB4PSI2MCIgeT0iMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5GYXJtVGVjaDwvdGV4dD48L3N2Zz4='">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#products">Products</a>
+                <a href="index.html#how-it-works">How It Works</a>
+                <a href="index.html#testimonials">Testimonials</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Catalog Header -->
+    <section class="catalog-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Complete Product Catalog</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Explore our full range of farming equipment and solutions</p>
+        </div>
+    </section>
+
+    <!-- Catalog Filters -->
+    <section class="catalog-filters">
+        <div class="container">
+            <button class="filter-btn active" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="tractors">Tractors</button>
+            <button class="filter-btn" data-filter="harvesters">Harvesters</button>
+            <button class="filter-btn" data-filter="sprayers">Sprayers</button>
+            <button class="filter-btn" data-filter="implements">Implements</button>
+        </div>
+    </section>
+
+    <!-- Product Catalog -->
+    <section class="products">
+        <div class="container">
+            <div class="catalog-grid">
+                <!-- Tractors -->
+                <div class="product-card" data-category="tractors" data-aos="fade-up">
+                    <img src="tractor1.jpg" alt="Smart Tractor Pro" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+U21hcnQgVHJhY3RvciBQcm88L3RleHQ+PC9zdmc+'">
+                    <h3>Smart Tractor Pro</h3>
+                    <p>Advanced GPS-guided tractor with precision farming capabilities</p>
+                    <button class="inquiry-btn" data-product="Smart Tractor Pro">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="tractors" data-aos="fade-up">
+                    <img src="tractor2.jpg" alt="Compact Tractor" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+Q29tcGFjdCBUcmFjdG9yPC90ZXh0Pjwvc3ZnPg=='">
+                    <h3>Compact Tractor</h3>
+                    <p>Versatile compact tractor for small to medium farms</p>
+                    <button class="inquiry-btn" data-product="Compact Tractor">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="tractors" data-aos="fade-up">
+                    <img src="tractor3.jpg" alt="Heavy Duty Tractor" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SGVhdnkgRHV0eSBUcmFjdG9yPC90ZXh0Pjwvc3ZnPg=='">
+                    <h3>Heavy Duty Tractor</h3>
+                    <p>Powerful tractor for large-scale farming operations</p>
+                    <button class="inquiry-btn" data-product="Heavy Duty Tractor">Request Info</button>
+                </div>
+                
+                <!-- Harvesters -->
+                <div class="product-card" data-category="harvesters" data-aos="fade-up">
+                    <img src="harvester1.jpg" alt="Grain Harvester" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+R3JhaW4gSGFydmVzdGVyPC90ZXh0Pjwvc3ZnPg=='">
+                    <h3>Grain Harvester</h3>
+                    <p>Efficient harvesting machine for grain crops</p>
+                    <button class="inquiry-btn" data-product="Grain Harvester">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="harvesters" data-aos="fade-up">
+                    <img src="harvester2.jpg" alt="Cotton Harvester" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+Q290dG9uIEhhcnZlc3RlcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Cotton Harvester</h3>
+                    <p>Specialized harvester for cotton crops</p>
+                    <button class="inquiry-btn" data-product="Cotton Harvester">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="harvesters" data-aos="fade-up">
+                    <img src="harvester3.jpg" alt="Sugarcane Harvester" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+U3VnYXJjYW5lIEhhcnZlc3RlcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Sugarcane Harvester</h3>
+                    <p>Specialized harvester for sugarcane crops</p>
+                    <button class="inquiry-btn" data-product="Sugarcane Harvester">Request Info</button>
+                </div>
+                
+                <!-- Sprayers -->
+                <div class="product-card" data-category="sprayers" data-aos="fade-up">
+                    <img src="sprayer1.jpg" alt="Precision Sprayer" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UHJlY2lzaW9uIFNwcmF5ZXI8L3RleHQ+PC9zdmc+'">
+                    <h3>Precision Sprayer</h3>
+                    <p>Smart spraying system for optimal crop protection</p>
+                    <button class="inquiry-btn" data-product="Precision Sprayer">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="sprayers" data-aos="fade-up">
+                    <img src="sprayer2.jpg" alt="Aerial Sprayer" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QWVyaWFsIFNwcmF5ZXI8L3RleHQ+PC9zdmc+'">
+                    <h3>Aerial Sprayer</h3>
+                    <p>Drone-based spraying system for hard-to-reach areas</p>
+                    <button class="inquiry-btn" data-product="Aerial Sprayer">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="sprayers" data-aos="fade-up">
+                    <img src="sprayer3.jpg" alt="Backpack Sprayer" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QmFja3BhY2sgU3ByYXllcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Backpack Sprayer</h3>
+                    <p>Portable spraying system for small areas</p>
+                    <button class="inquiry-btn" data-product="Backpack Sprayer">Request Info</button>
+                </div>
+                
+                <!-- Implements -->
+                <div class="product-card" data-category="implements" data-aos="fade-up">
+                    <img src="implement1.jpg" alt="Plow" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UGxvdzwvdGV4dD48L3N2Zz4='">
+                    <h3>Plow</h3>
+                    <p>Efficient soil preparation implement</p>
+                    <button class="inquiry-btn" data-product="Plow">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="implements" data-aos="fade-up">
+                    <img src="implement2.jpg" alt="Seeder" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+U2VlZGVyPC90ZXh0Pjwvc3ZnPg=='">
+                    <h3>Seeder</h3>
+                    <p>Precision seeding equipment</p>
+                    <button class="inquiry-btn" data-product="Seeder">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="implements" data-aos="fade-up">
+                    <img src="implement3.jpg" alt="Harrow" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+SGFycm93PC90ZXh0Pjwvc3ZnPg=='">
+                    <h3>Harrow</h3>
+                    <p>Soil cultivation implement</p>
+                    <button class="inquiry-btn" data-product="Harrow">Request Info</button>
+                </div>
+                
+                <!-- Additional Products (12 more) -->
+                <!-- Tractors -->
+                <div class="product-card" data-category="tractors" data-aos="fade-up">
+                    <img src="tractor4.jpg" alt="Electric Tractor" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+RWxlY3RyaWMgVHJhY3RvcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Electric Tractor</h3>
+                    <p>Environmentally friendly electric-powered tractor</p>
+                    <button class="inquiry-btn" data-product="Electric Tractor">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="tractors" data-aos="fade-up">
+                    <img src="tractor5.jpg" alt="Autonomous Tractor" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QXV0b25vbW91cyBUcmFjdG9yPC90ZXh0Pjwvc3ZnPg=='">
+                    <h3>Autonomous Tractor</h3>
+                    <p>Self-driving tractor with AI technology</p>
+                    <button class="inquiry-btn" data-product="Autonomous Tractor">Request Info</button>
+                </div>
+                
+                <!-- Harvesters -->
+                <div class="product-card" data-category="harvesters" data-aos="fade-up">
+                    <img src="harvester4.jpg" alt="Potato Harvester" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UG90YXRvIEhhcnZlc3RlcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Potato Harvester</h3>
+                    <p>Specialized harvester for potato crops</p>
+                    <button class="inquiry-btn" data-product="Potato Harvester">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="harvesters" data-aos="fade-up">
+                    <img src="harvester5.jpg" alt="Grape Harvester" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+R3JhcGUgSGFydmVzdGVyPC90ZXh0Pjwvc3ZnPg=='">
+                    <h3>Grape Harvester</h3>
+                    <p>Specialized harvester for vineyards</p>
+                    <button class="inquiry-btn" data-product="Grape Harvester">Request Info</button>
+                </div>
+                
+                <!-- Sprayers -->
+                <div class="product-card" data-category="sprayers" data-aos="fade-up">
+                    <img src="sprayer4.jpg" alt="Tower Sprayer" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+VG93ZXIgU3ByYXllcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Tower Sprayer</h3>
+                    <p>Tall spraying system for orchards</p>
+                    <button class="inquiry-btn" data-product="Tower Sprayer">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="sprayers" data-aos="fade-up">
+                    <img src="sprayer5.jpg" alt="Smart Sprayer" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+U21hcnQgU3ByYXllcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Smart Sprayer</h3>
+                    <p>AI-powered spraying system with sensors</p>
+                    <button class="inquiry-btn" data-product="Smart Sprayer">Request Info</button>
+                </div>
+                
+                <!-- Implements -->
+                <div class="product-card" data-category="implements" data-aos="fade-up">
+                    <img src="implement4.jpg" alt="Cultivator" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+Q3VsdGl2YXRvcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Cultivator</h3>
+                    <p>Soil cultivation and weed control implement</p>
+                    <button class="inquiry-btn" data-product="Cultivator">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="implements" data-aos="fade-up">
+                    <img src="implement5.jpg" alt="Fertilizer Spreader" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+RmVydGlsaXplciBTcHJlYWRlcjwvdGV4dD48L3N2Zz4='">
+                    <h3>Fertilizer Spreader</h3>
+                    <p>Precision fertilizer application equipment</p>
+                    <button class="inquiry-btn" data-product="Fertilizer Spreader">Request Info</button>
+                </div>
+                
+                <div class="product-card" data-category="implements" data-aos="fade-up">
+                    <img src="implement6.jpg" alt="Baler" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDAiIGhlaWdodD0iMjAwIiB2aWV3Qm94PSIwIDAgNDAwIDIwMCI+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNkZGQiLz48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjIwIiBmaWxsPSIjNjY2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+QmFsZXI8L3RleHQ+PC9zdmc+'">
+                    <h3>Baler</h3>
+                    <p>Hay and straw baling equipment</p>
+                    <button class="inquiry-btn" data-product="Baler">Request Info</button>
+                </div>
+                
+                <!-- More products can be added here -->
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <div class="page-btn active">1</div>
+                <div class="page-btn">2</div>
+                <div class="page-btn">3</div>
+                <div class="page-btn">4</div>
+                <div class="page-btn">5</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.svg" alt="FarmTech Logo" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAxMjAgNDAiPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiMyZWNjNzEiLz48dGV4dCB4PSI2MCIgeT0iMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyMCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGR5PSIuM2VtIj5GYXJtVGVjaDwvdGV4dD48L3N2Zz4='">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#products">Products</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FarmTech Equipment. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inquiry Modal -->
+    <div class="modal" id="inquiryModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Request Product Information</h3>
+            <form id="inquiry-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" id="product-name" value="">
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Additional Requirements" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+        
+        // Product filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    productCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Pagination
+            const pageButtons = document.querySelectorAll('.page-btn');
+            
+            pageButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    pageButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    // Here you would typically load the corresponding page of products
+                    // For demo purposes, we're just changing the active state
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
